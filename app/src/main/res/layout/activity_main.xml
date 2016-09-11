@@ -21,7 +21,7 @@
             style="@style/Base.TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_gravity="center_horizontal"
             android:text="Welcome People !!" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv1"
-            android:layout_marginLeft="130dp"
+            android:layout_gravity="center_horizontal"
             android:text="Join Now!!"
             android:textColor="#ff0000" />
 
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_below="@+id/tv3"
-            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/cookies" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
-            android:layout_marginLeft="80dp"
+            android:layout_gravity="center_horizontal"
             android:text="COOKIES FESTIVAL"
             android:textColor="#845a5a" />
 
@@ -61,7 +61,7 @@
 
         <EditText
             android:id="@+id/editTextNama"
-            android:layout_width="390dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewNama" />
 
@@ -74,7 +74,7 @@
 
         <EditText
             android:id="@+id/editTextUmur"
-            android:layout_width="353dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewUmur" />
 

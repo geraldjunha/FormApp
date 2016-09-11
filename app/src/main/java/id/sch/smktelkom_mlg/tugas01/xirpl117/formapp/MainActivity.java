@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         if (cb3.isChecked()) Kategori += cb3.getText() + ",";
         if (cb4.isChecked()) Kategori += cb4.getText();
 
-        if (Kategori.length() == startlen) Kategori += "Anda Salah Pilih!!!";
+        if (Kategori.length() == startlen) Kategori += "You Choose The Wrong Choice!!!";
 
         if (rgJK.getCheckedRadioButtonId() != -1) {
             RadioButton rb = (RadioButton)
@@ -73,24 +73,24 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             hasil = rb.getText().toString();
         }
         if (Name.isEmpty()) {
-            etNama.setError("Nama Belum Diisi");
+            etNama.setError("Your Name Is Empty");
         } else if (Name.length() < 4) {
-            etNama.setError("Nama Minimal 4 Karakter");
+            etNama.setError("Make Sure Your Name Contain 4 Character");
         } else {
             etNama.setError(null);
         }
 
         if (Age.isEmpty()) {
-            etUmur.setError("Umur Anda Belum Diisi");
+            etUmur.setError("Your Age Is Empty");
         } else if (Age.length() > 2)
         {
-            etUmur.setError("Format Umur Anda Salah!!!");
+            etUmur.setError("Your Format Age Is False!!!");
         }
         else
         {
             etNama.setError(null);
         }
-        tvHasil1.setText("----------(COOKIES FESTIVAL)----------" + "\nName       : " + Name + "\nAge        : " + Age + "\nGender     : " + hasil + "\nFrom       : " + From + Kategori);
+        tvHasil1.setText("----------(COOKIES FESTIVAL)----------" + "\nName       : " + Name + "\nAge          : " + Age + "\nGender    : " + hasil + "\nFrom       : " + From + Kategori);
     }
 
     @Override
