@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Kota">
+        <item>Malang</item>
+        <item>Surabaya</item>
+        <item>Blitar</item>
+        <item>Kediri</item>
+        <item>Jombang</item>
+    </string-array>
+
+</resources>
