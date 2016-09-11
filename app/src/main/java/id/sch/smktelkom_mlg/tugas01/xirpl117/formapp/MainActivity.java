@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     RadioGroup rgJK;
     Spinner spKota;
     CheckBox cb1, cb2, cb3, cb4;
-    Button bOK;
+    Button bOk;
     TextView tvHasil1, tvKategori;
     int nKategori;
 
@@ -36,11 +36,15 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         cb2 = (CheckBox) findViewById(R.id.checkBox2);
         cb3 = (CheckBox) findViewById(R.id.checkBox3);
         cb4 = (CheckBox) findViewById(R.id.checkBox4);
-        bOK = (Button) findViewById(R.id.buttonOK);
+        cb1.setOnCheckedChangeListener(this);
+        cb2.setOnCheckedChangeListener(this);
+        cb3.setOnCheckedChangeListener(this);
+        cb4.setOnCheckedChangeListener(this);
+        bOk = (Button) findViewById(R.id.buttonOk);
         tvHasil1 = (TextView) findViewById(R.id.textViewHasil);
         tvKategori = (TextView) findViewById(R.id.textViewKategori);
 
-        bOK.setOnClickListener(new View.OnContextClickListener() {
+        bOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 doClick();
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         String Age = etUmur.getText().toString();
         String hasil = null;
         String From = spKota.getSelectedItem().toString();
-        String Kategori = "Anda Memilih         :";
+        String Kategori = "\nYour Selected         :";
 
         int startlen = Kategori.length();
         if (cb1.isChecked()) Kategori += cb1.getText() + ",";
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         if (Age.isEmpty()) {
             etUmur.setError("Umur Anda Belum Diisi");
-        } else if
+        } else if (Age.length() > 2)
         {
             etUmur.setError("Format Umur Anda Salah!!!");
         }
@@ -93,6 +97,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (isChecked) nKategori += 1;
         else nKategori -= 1;
-        tvKategori.setText("Hobi ("nKategori + "terpilih");
+        tvKategori.setText("Hobby (" + nKategori + "selected");
     }
 }
